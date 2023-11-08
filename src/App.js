@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import _ from 'lodash';
 
 function App() {
+  const string1 = 'Prvi string';
+  const string2 = 'Drugi string';
+
+  const textElement = <p>Ovo je neki tekst na ekranu.</p>;
+
+  const textWithVariable = <p>Ovo je tekst s varijablom: {string1}</p>;
+
+  const textWithBothVariables = (
+    <p>
+      Varijabla 1: {string1}, Varijabla 2: {string2}
+    </p>
+  );
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {textElement}
+      {textWithVariable}
+      {textWithBothVariables}
     </div>
   );
 }
